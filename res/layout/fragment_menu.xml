@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffd"
+    android:layout_height="match_parent"
+    tools:context=".MenuFragment" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/dc_caf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_marginTop="10dp"
+                android:onClick="getDCmenu"
+                android:text="@string/dc_caf" />
+
+            <Button
+                android:id="@+id/v1_caf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_below="@+id/dc_caf_button"
+                android:onClick="getV1menu"
+                android:text="@string/v1_caf" />
+
+            <Button
+                android:id="@+id/rev_caf_button"
+                android:layout_below="@+id/v1_caf_button"
+                android:layout_centerHorizontal="true"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="getREVmenu"
+                android:text="@string/rev_caf" />
+
+            <Button
+                android:id="@+id/sch_caf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_below="@+id/rev_caf_button"
+                android:onClick="getSCHmenu"
+                android:text="@string/sch_caf" />
+
+            <Button
+                android:id="@+id/hh_caf_button"
+                android:layout_below="@+id/sch_caf_button"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_height="wrap_content"
+                android:onClick="getHHmenu"
+                android:text="@string/hh_caf" />
+
+            <Button
+                android:id="@+id/pas_caf_button"
+                android:layout_below="@+id/hh_caf_button"
+                android:layout_centerHorizontal="true"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="getPASmenu"
+                android:text="@string/pas_caf" />
+
+            <Button
+                android:id="@+id/bcm_caf_button"
+                android:layout_below="@+id/pas_caf_button"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="getBCMmenu"
+                android:text="@string/bcm_caf" />
+
+            <Button
+                android:id="@+id/nh_caf_button"
+                android:layout_below="@+id/bcm_caf_button"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@+id/bcm_caf_button"
+                android:layout_alignRight="@+id/bcm_caf_button"
+                android:layout_height="wrap_content"
+                android:onClick="getNHmenu"
+                android:text="@string/nh_caf" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

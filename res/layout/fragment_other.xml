@@ -1,0 +1,426 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd"
+    tools:context=".HoursFragment" >
+
+<!-- The hex code for green is #009900, the hex code for red is #FF0000 -->
+    
+	<ScrollView
+        android:id="@+id/scrollView1"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+		android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+    	<RelativeLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+        	
+    	    <TextView
+    	        android:id="@+id/hours_operation_textview"
+    	        android:layout_centerHorizontal="true"
+    	        android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+        		android:text="@string/hours_operation"
+        		android:textStyle="bold"
+        		android:textSize="20sp" />    	        
+        	
+    	    <TextView
+    	        android:id="@+id/slc_header_textview"
+    	        android:layout_below="@+id/ml_hours"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_marginTop="10dp"
+    	        android:text="@string/slc_caf"
+    	        android:textSize="17sp"
+    	        android:textStyle="bold"
+    	        android:textColor="#FF0000" />
+
+    		<TextView
+    		    android:id="@+id/slc_hours"
+    		    android:layout_below="@+id/slc_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/subway_textview"
+    		    android:layout_below="@+id/slc_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/slc_subway"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/subway_hours"
+    		    android:layout_below="@+id/subway_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/dp_header_textview"
+    		    android:layout_below="@+id/dc_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/dp_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/dp_hours"
+    		    android:layout_below="@+id/dp_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+
+    		<TextView
+    		    android:id="@+id/ceit_header_textview"
+    		    android:layout_below="@+id/subway_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/ceit_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/ceit_hours"
+    		    android:layout_below="@+id/ceit_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/opt_header_textview"
+    		    android:layout_below="@+id/ceit_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/opt_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/opt_hours"
+    		    android:layout_below="@+id/opt_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/ml_header_textview"
+    		    android:layout_below="@+id/thslc_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/ml_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/ml_hours"
+    		    android:layout_below="@+id/ml_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/thdc_header_textview"
+    		    android:layout_below="@+id/thml_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/th_dc"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/thdc_hours"
+    		    android:layout_below="@+id/thdc_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/thdc2_header_textview"
+    		    android:layout_below="@+id/thsch_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/th_dc2"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/thdc2_hours"
+    		    android:layout_below="@+id/thdc2_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView"
+    		    android:layout_marginBottom="10dp" />
+    		
+    		<TextView
+    		    android:id="@+id/thml_header_textview"
+    		    android:layout_below="@+id/rev_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/th_ml"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/thml_hours"
+    		    android:layout_below="@+id/thml_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/thsch_header_textview"
+    		    android:layout_below="@+id/thdc_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/th_sch"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/thsch_hours"
+    		    android:layout_below="@+id/thsch_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/thslc_header_textview"
+    		    android:layout_below="@+id/dp_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/th_slc"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/thslc_hours"
+    		    android:layout_below="@+id/thslc_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/e3_header_textview"
+    		    android:layout_below="@+id/hh_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/e3_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/e3_hours"
+    		    android:layout_below="@+id/e3_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    	        android:id="@+id/dc_header_textview"
+    	        android:layout_below="@+id/hours_operation_textview"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:text="@string/dc_caf"
+    	        android:textSize="17sp"
+    	        android:textStyle="bold"
+    	        android:textColor="#FF0000" />
+
+    		<TextView
+    		    android:id="@+id/dc_hours"
+    		    android:layout_below="@+id/dc_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/v1_header_textview"
+    		    android:layout_below="@+id/sch_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/v1_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/v1_hours"
+    		    android:layout_below="@+id/v1_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/rev_header_textview"
+    		    android:layout_below="@+id/tcpp_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/rev_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/rev_hours"
+    		    android:layout_below="@+id/rev_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/sch_header_textview"
+    		    android:layout_below="@+id/e3_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/sch_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/sch_hours"
+    		    android:layout_below="@+id/sch_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/hh_header_textview"
+    		    android:layout_below="@+id/opt_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/hh_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/hh_hours"
+    		    android:layout_below="@+id/hh_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    			
+    		<TextView
+    		    android:id="@+id/pas_header_textview"
+    		    android:layout_below="@+id/v1_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/pas_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/pas_hours"
+    		    android:layout_below="@+id/pas_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    		<TextView
+    		    android:id="@+id/bcm_header_textview"
+    		    android:layout_below="@+id/pas_hours"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_marginTop="10dp"
+    		    android:text="@string/bcm_caf"
+    		    android:textSize="17sp"
+    		    android:textStyle="bold"
+    		    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/bcm_hours"
+    		    android:layout_below="@+id/bcm_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView" />
+    		
+    	 	<TextView
+    	 	    android:id="@+id/nh_header_textview"
+    	 	    android:layout_below="@+id/bcm_hours"
+    	 	    android:layout_width="wrap_content"
+    	 	    android:layout_height="wrap_content"
+    	 	    android:layout_marginTop="10dp"
+    	 	    android:text="@string/nh_caf"
+    	 	    android:textSize="17sp"
+    	 	    android:textStyle="bold"
+    	 	    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/nh_hours"
+    		    android:layout_below="@+id/nh_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView"
+    		    />
+    		
+    		<TextView
+    	 	    android:id="@+id/tcpp_header_textview"
+    	 	    android:layout_below="@+id/nh_hours"
+    	 	    android:layout_width="wrap_content"
+    	 	    android:layout_height="wrap_content"
+    	 	    android:layout_marginTop="10dp"
+    	 	    android:text="@string/tc_caf"
+    	 	    android:textSize="17sp"
+    	 	    android:textStyle="bold"
+    	 	    android:textColor="#FF0000" />
+    	    
+    		<TextView
+    		    android:id="@+id/tcpp_hours"
+    		    android:layout_below="@+id/tcpp_header_textview"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/defaultTextView"
+    		     />
+    		
+    		
+    		
+        </RelativeLayout>
+        
+    </ScrollView>
+    
+	      <ProgressBar
+        android:id="@+id/loading_spinner2"
+        style="?android:progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    
+</FrameLayout>
